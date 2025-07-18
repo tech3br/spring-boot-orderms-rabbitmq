@@ -65,7 +65,11 @@ graph TB
 ### 1️⃣ Clone o Repositório
 
 ```bash
+<<<<<<< HEAD
 git clone https://github.com/tech3br/spring-boot-orderms-rabbitmq
+=======
+git clone <repository-url>
+>>>>>>> 5bef5fa (docs: adiciona README.md completo do microserviço)
 cd orderms
 ```
 
