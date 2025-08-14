@@ -187,7 +187,7 @@ docker build -t orderms:latest .
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 orderms/
@@ -226,7 +226,7 @@ sequenceDiagram
 
 ---
 
-## 🛠Stack Tecnológica
+## Stack
 
 ### Backend
 - **Spring Boot 3.5.3** - Framework principal
