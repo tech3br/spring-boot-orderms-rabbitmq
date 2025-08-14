@@ -21,7 +21,7 @@
 
 ---
 
-## 🏛️ Arquitetura
+## Arquitetura
 
 ```mermaid
 graph TB
@@ -54,7 +54,7 @@ graph TB
 
 ---
 
-## Quick Start
+## Desenvolvimento
 
 ### Pré-requisitos
 
