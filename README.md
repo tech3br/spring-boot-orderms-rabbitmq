@@ -1,4 +1,4 @@
-# 🛒 OrderMS - Microserviço de Pedidos
+# OrderMS Delivery - Microserviço de pedidos com processamento assincrono via RabbitMQ
 
 ![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=java)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.3-brightgreen?style=for-the-badge&logo=spring)
@@ -6,18 +6,18 @@
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-3.13-orange?style=for-the-badge&logo=rabbitmq)
 ![Docker](https://img.shields.io/badge/Docker-Compose-blue?style=for-the-badge&logo=docker)
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 **OrderMS** é um microserviço especializado no **processamento e gerenciamento de pedidos** em uma arquitetura distribuída. O serviço implementa padrões modernos de desenvolvimento, incluindo **Event-Driven Architecture** e **Domain-Driven Design**.
 
-### 🎯 Características Principais
+### Características Principais
 
-- 🏗️ **Arquitetura Orientada a Eventos** - Processamento assíncrono via RabbitMQ
-- 📦 **Persistência NoSQL** - MongoDB para armazenamento escalável
-- 🔄 **Event Sourcing** - Rastreamento completo do ciclo de vida dos pedidos
-- 🚀 **Cloud Ready** - Containerização com Docker
-- 🧪 **Testes Automatizados** - Cobertura completa com JUnit e Bruno
-- 📊 **Monitoramento** - Logs estruturados e métricas
+- **Arquitetura Orientada a Eventos** - Processamento assíncrono via RabbitMQ
+- **Persistência NoSQL** - MongoDB para armazenamento escalável
+- **Event Sourcing** - Rastreamento completo do ciclo de vida dos pedidos
+- **Cloud Ready** - Containerização com Docker
+- **Testes Automatizados** - Cobertura completa com JUnit e Bruno
+- **Monitoramento** - Logs estruturados e métricas
 
 ---
 
@@ -43,7 +43,7 @@ graph TB
     end
 ```
 
-### 📦 Componentes
+### Componentes
 
 | Componente | Responsabilidade |
 |-----------|-----------------|
@@ -54,22 +54,22 @@ graph TB
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Pré-requisitos
 
-- ☕ **Java 21+**
-- 🐳 **Docker & Docker Compose**
-- 📦 **Maven 3.8+** (ou usar o wrapper incluído)
+- **Java 21+**
+- **Docker & Docker Compose**
+- **Maven 3.8+** (ou usar o wrapper incluído)
 
-### 1️⃣ Clone o Repositório
+### 1️Clone o Repositório
 
 ```bash
 git clone https://github.com/tech3br/spring-boot-orderms-rabbitmq
 cd orderms
 ```
 
-### 2️⃣ Inicie a Infraestrutura
+### 2️Inicie a Infraestrutura
 
 ```bash
 # Sobe MongoDB e RabbitMQ via Docker
@@ -77,7 +77,7 @@ cd docker
 docker-compose up -d
 ```
 
-### 3️⃣ Execute a Aplicação
+### 3️Execute a Aplicação
 
 ```bash
 # Usando Maven Wrapper (recomendado)
@@ -87,15 +87,15 @@ docker-compose up -d
 mvn spring-boot:run
 ```
 
-### ✅ Verificação
+### Verificação
 
-- 🌐 **Aplicação**: http://localhost:8080
-- 🐰 **RabbitMQ Management**: http://localhost:15672 (guest/guest)
-- 🍃 **MongoDB**: localhost:27017
+- **Aplicação**: http://localhost:8080
+- **RabbitMQ Management**: http://localhost:15672 (guest/guest)
+- **MongoDB**: localhost:27017
 
 ---
 
-## 🔧 Configuração
+## Configuração
 
 ### MongoDB
 
@@ -116,9 +116,9 @@ spring.data.mongodb.password=admin123
 
 ---
 
-## 📡 API & Eventos
+## API & Eventos
 
-### 🔔 Eventos Consumidos
+### Eventos Consumidos
 
 #### OrderCreatedEvent
 ```json
@@ -135,7 +135,7 @@ spring.data.mongodb.password=admin123
 }
 ```
 
-### 📊 Modelo de Dados
+### Modelo de Dados
 
 #### OrderEntity
 ```java
@@ -152,7 +152,7 @@ public class OrderEntity {
 
 ---
 
-## 🧪 Testes
+## Testes
 
 ### Executar Testes Unitários
 ```bash
@@ -171,7 +171,7 @@ bru run
 
 ---
 
-## 🐳 Docker
+## Docker
 
 ### Desenvolvimento Local
 ```bash
@@ -207,7 +207,7 @@ orderms/
 
 ---
 
-## 🔄 Fluxo de Eventos
+## Fluxo de Eventos
 
 ```mermaid
 sequenceDiagram
@@ -226,7 +226,7 @@ sequenceDiagram
 
 ---
 
-## 🛠️ Stack Tecnológica
+## 🛠Stack Tecnológica
 
 ### Backend
 - **Spring Boot 3.5.3** - Framework principal
@@ -246,7 +246,7 @@ sequenceDiagram
 
 ---
 
-## 📊 Monitoramento & Logs
+## Monitoramento & Logs
 
 ### Logs Estruturados
 ```java
@@ -255,21 +255,21 @@ logger.info("Message consumed: {}", message);
 ```
 
 ### Health Checks
-- ✅ MongoDB Connection
-- ✅ RabbitMQ Connection
-- ✅ Application Status
+- MongoDB Connection
+- RabbitMQ Connection
+- Application Status
 
 ---
 
-## 🤝 Contribuição
+## Contribuição
 
-1. 🍴 Fork o projeto
-2. 🌿 Crie uma feature branch (`git checkout -b feature/AmazingFeature`)
-3. ✅ Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. 📤 Push para a branch (`git push origin feature/AmazingFeature`)
-5. 🔄 Abra um Pull Request
+1. Fork o projeto
+2. Crie uma feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-### 📋 Padrões de Commit
+### Padrões de Commit
 
 - `feat:` nova funcionalidade
 - `fix:` correção de bug
@@ -281,14 +281,14 @@ logger.info("Message consumed: {}", message);
 
 ---
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença [MIT](LICENSE).
 
 ---
 
-## 👥 Mantenedor
+## Mantenedor
 
 Desenvolvido com ❤️ por **Tech3BR**
 
-- 📧 **Email**: dfsdireito95@gmail.com
+- **Email**: dfsdireito95@gmail.com
